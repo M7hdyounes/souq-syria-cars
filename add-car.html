@@ -1,49 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>إضافة سيارة للبيع</title>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-  <header class="header">
-    <h1>إضافة سيارة للبيع</h1>
-  </header>
-
-  <main class="form-container">
-    <form id="carForm">
-      <label>اسم السيارة:</label>
-      <input type="text" name="name" required />
-
-      <label>الموديل (سنة الإصدار):</label>
-      <input type="number" name="year" required />
-
-      <label>السعر بالدولار:</label>
-      <input type="number" name="price" required />
-
-      <label>وصف السيارة:</label>
-      <textarea name="description" required></textarea>
-
-      <label>صورة السيارة:</label>
-      <input type="file" name="image" accept="image/*" required />
-
-      <button type="submit">إرسال السيارة للمراجعة</button>
-    </form>
-
-    <div id="confirmationMessage" style="display: none;">
-      <p>🚗 تم إرسال سيارتك للمراجعة بنجاح. سيتم الاتصال بك لاحقاً.</p>
-    </div>
-  </main>
-
-  <script>
-    document.getElementById("carForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // هنا مكان إرسال البيانات للإيميل أو الخادم لاحقاً
-      document.getElementById("carForm").style.display = "none";
-      document.getElementById("confirmationMessage").style.display = "block";
-    });
-  </script>
-</body>
-</html>
